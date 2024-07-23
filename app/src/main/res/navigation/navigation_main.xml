@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/navigation_entry">
+
+    <fragment
+        android:id="@+id/navigation_entry"
+        android:name="com.khaleddev.zealapp.ui.EntryFragment"
+        tools:layout="@layout/fragment_entry">
+        <action
+            android:id="@+id/action_entryFragment_to_discountManagerFragment"
+            app:destination="@id/navigation_discount" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_discount"
+        android:name="com.khaleddev.zealapp.ui.DiscountManagerFragment"
+        tools:layout="@layout/fragment_discount_management">
+        <action
+            android:id="@+id/action_discountManagerFragment_to_successFragment"
+            app:destination="@id/navigation_success"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_success"
+        android:name="com.khaleddev.zealapp.ui.SuccessFragment"
+        tools:layout="@layout/fragment_success">
+    </fragment>
+</navigation>

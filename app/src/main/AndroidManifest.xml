@@ -21,6 +21,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <receiver android:name=".core.ZealBroadcastReceiver" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="com.khaleddev.zealapp.TRANSACTION_DATA"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
